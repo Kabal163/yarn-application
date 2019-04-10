@@ -1,0 +1,17 @@
+spring:
+  hadoop:
+    fsUri: hdfs://sandbox-admin1.cloudera.com:8020
+    resourceManagerHost: sandbox-admin2.cloudera.com
+  yarn:
+    appName: gs-yarn-basic
+    applicationDir: /app/gs-yarn-basic/
+    client:
+      files:
+        - "file:/mnt/app/gs-yarn-basic-container-0.1.0.jar"
+        - "file:/mnt/app/gs-yarn-basic-appmaster-0.1.0.jar"
+      launchcontext:
+        archiveFile: gs-yarn-basic-appmaster-0.1.0.jar
+    appmaster:
+      containerCount: 1
+      launchcontext:
+        archiveFile: gs-yarn-basic-container-0.1.0.jar

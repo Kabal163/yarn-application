@@ -1,10 +1,16 @@
 spring:
   hadoop:
     fsUri: hdfs://sandbox-admin1.cloudera.com:8020
-    resourceManagerHost: sandbox-admin2.cloudera.com
+    resourceManagerHost: sandbox-admin1.cloudera.com
+#    security:
+#      userPrincipal: admin/admin@HADOOP.COM
+#      userKeytab: /var/kerberos/krb5kdc/kadm5.keytab
+#      authMethod: kerberos
+#      namenodePrincipal: hdfs/sandbox-admin1.cloudera.com@HADOOP.COM
+#      rmManagerPrincipal: yarn/sandbox-admin2.cloudera.com@HADOOP.COM
   yarn:
     appName: gs-yarn-basic
-    applicationDir: /app/gs-yarn-basic/
+    applicationDir: /tmp/gs-yarn-basic/
     client:
       files:
         - "file:/mnt/app/gs-yarn-basic-container-0.1.0.jar"
